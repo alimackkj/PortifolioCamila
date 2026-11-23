@@ -1,0 +1,171 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CORPO DO SITE */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #171329, #24183d, #30204d);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: #171329;
+}
+
+header h1 {
+    color: #c4a7ff;
+}
+
+/* NAVEGAÇÃO */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #c4a7ff;
+}
+
+/* SEÇÕES */
+section {
+    padding: 100px 8%;
+    min-height: 60vh;
+}
+
+h2 {
+    color: #c4a7ff;
+    margin-bottom: 20px;
+}
+
+/* LINKS */
+a {
+    color: #c4a7ff;
+}
+
+a:hover {
+    color: #e0d1ff;
+}
+
+/* CARD DOS PROJETOS */
+.projeto-bootstrap {
+    background-color: #e9e1f5;
+    border: 1px solid #c4a7ff;
+    border-radius: 18px;
+    color: #302044;
+    overflow: hidden;
+}
+
+/* CARROSSEL BOOTSTRAP */
+.projeto-bootstrap .carousel {
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.projeto-bootstrap .carousel-item img {
+    height: 400px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* SETAS DO CARROSSEL */
+.projeto-bootstrap .carousel-control-prev-icon,
+.projeto-bootstrap .carousel-control-next-icon {
+    filter: invert(20%) sepia(30%) saturate(1500%)
+            hue-rotate(230deg) brightness(75%);
+}
+
+/* INFORMAÇÕES DO PROJETO */
+.projeto-bootstrap .card-body {
+    padding: 35px;
+}
+
+.projeto-bootstrap .card-title {
+    color: #593b83;
+    font-size: 28px;
+}
+
+.projeto-bootstrap .card-text {
+    color: #49365f;
+}
+
+.projeto-bootstrap small {
+    color: #705d85;
+}
+
+/* BOTÃO GITHUB */
+.projeto-bootstrap .btn-outline-light {
+    color: #593b83;
+    border-color: #805ad5;
+}
+
+.projeto-bootstrap .btn-outline-light:hover {
+    background-color: #805ad5;
+    color: #ffffff;
+}
+
+/* BOTÃO DEMONSTRAÇÃO */
+.projeto-bootstrap .btn-primary {
+    background-color: #805ad5;
+    border-color: #805ad5;
+    color: #ffffff;
+}
+
+.projeto-bootstrap .btn-primary:hover {
+    background-color: #6842bd;
+    border-color: #6842bd;
+}
+
+/* RODAPÉ */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #171329;
+    color: #ffffff;
+}
+
+/* Textos gerais do site em branco */
+body {
+    color: #ffffff;
+}
+
+header,
+header a,
+section h2,
+section p,
+footer {
+    color: #ffffff;
+}
+
+/* Mantém os textos do card em roxo escuro */
+.projeto-bootstrap,
+.projeto-bootstrap .card-title,
+.projeto-bootstrap .card-text,
+.projeto-bootstrap small {
+    color: #49365f;
+}
+
+.projeto-bootstrap .card-title {
+    color: #593b83;
+}
