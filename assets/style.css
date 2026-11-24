@@ -10,7 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* CORPO DO SITE */
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #171329, #24183d, #30204d);
@@ -18,7 +17,102 @@ body {
     min-height: 100vh;
 }
 
-/* CABEÇALHO */
+/* CAPA */
+.capa {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+
+.capa-conteudo {
+    max-width: 900px;
+}
+
+.capa-saudacao {
+    color: #c4a7ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.capa h1 {
+    color: #ffffff;
+    font-family: Impact, fantasy;
+    font-size: clamp(45px, 8vw, 90px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.capa h1 span {
+    display: block;
+    color: #c4a7ff;
+}
+
+.capa-descricao {
+    color: #f3e8ff;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* BOTÕES DA CAPA */
+.capa-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-principal {
+    background-color: #805ad5;
+    color: #ffffff;
+    border: 2px solid #805ad5;
+}
+
+.botao-principal:hover {
+    background-color: #6842bd;
+    border-color: #6842bd;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.botao-secundario {
+    background-color: transparent;
+    color: #e0d1ff;
+    border: 2px solid #c4a7ff;
+}
+
+.botao-secundario:hover {
+    background-color: #c4a7ff;
+    color: #171329;
+    transform: translateY(-3px);
+}
+
+/* RODAPÉ DA CAPA */
+.capa-rodape {
+    position: absolute;
+    bottom: 20px;
+    color: #b9a7d4;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+/* CABEÇALHO DAS OUTRAS PÁGINAS */
 header {
     display: flex;
     justify-content: space-between;
@@ -29,6 +123,9 @@ header {
 
 header h1 {
     color: #c4a7ff;
+    font-family: Impact, fantasy;
+    font-size: 30px;
+    margin: 0;
 }
 
 /* NAVEGAÇÃO */
@@ -40,30 +137,85 @@ nav {
 nav a {
     color: #ffffff;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #c4a7ff;
 }
 
-/* SEÇÕES */
-section {
-    padding: 100px 8%;
-    min-height: 60vh;
+/* PÁGINAS INTERNAS */
+.pagina {
+    padding: 80px 8%;
+    min-height: 75vh;
 }
 
-h2 {
-    color: #c4a7ff;
+.pagina h2 {
+    color: #b582f8;
+    margin-bottom: 25px;
+    font-family: "Arial Black", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: none !important;
+    -webkit-text-stroke: 0 !important;
+    filter: none !important;
+} 
+
+.pagina p {
+    color: #f3e8ff;
+    font-family: Times, "Times New Roman", serif;
+    font-size: 1.25rem;
+    line-height: 1.7;
     margin-bottom: 20px;
 }
 
-/* LINKS */
-a {
+/* FORMAÇÃO */
+.informacao {
+    margin-bottom: 35px;
+}
+
+.informacao h3 {
     color: #c4a7ff;
 }
 
-a:hover {
-    color: #e0d1ff;
+/* TECNOLOGIAS */
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0 40px;
+}
+
+.tecnologias span {
+    background-color: #eee7ff;
+    color: #7545c5;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* CONTATOS */
+.contatos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.contatos a {
+    color: #c4a7ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contatos a:hover {
+    color: #ffffff;
+}
+
+/* BOTÃO VOLTAR */
+.voltar {
+    margin-top: 20px;
 }
 
 /* CARD DOS PROJETOS */
@@ -75,7 +227,6 @@ a:hover {
     overflow: hidden;
 }
 
-/* CARROSSEL BOOTSTRAP */
 .projeto-bootstrap .carousel {
     max-width: 300px;
     margin: 20px auto;
@@ -87,14 +238,12 @@ a:hover {
     padding: 10px;
 }
 
-/* SETAS DO CARROSSEL */
 .projeto-bootstrap .carousel-control-prev-icon,
 .projeto-bootstrap .carousel-control-next-icon {
     filter: invert(20%) sepia(30%) saturate(1500%)
             hue-rotate(230deg) brightness(75%);
 }
 
-/* INFORMAÇÕES DO PROJETO */
 .projeto-bootstrap .card-body {
     padding: 35px;
 }
@@ -112,7 +261,6 @@ a:hover {
     color: #705d85;
 }
 
-/* BOTÃO GITHUB */
 .projeto-bootstrap .btn-outline-light {
     color: #593b83;
     border-color: #805ad5;
@@ -123,7 +271,6 @@ a:hover {
     color: #ffffff;
 }
 
-/* BOTÃO DEMONSTRAÇÃO */
 .projeto-bootstrap .btn-primary {
     background-color: #805ad5;
     border-color: #805ad5;
@@ -142,30 +289,69 @@ footer {
     align-items: center;
     padding: 20px;
     background-color: #171329;
+}
+
+footer p {
     color: #ffffff;
+    margin: 0;
 }
 
-/* Textos gerais do site em branco */
-body {
-    color: #ffffff;
-}
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
 
-header,
-header a,
-section h2,
-section p,
-footer {
-    color: #ffffff;
-}
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
 
-/* Mantém os textos do card em roxo escuro */
-.projeto-bootstrap,
-.projeto-bootstrap .card-title,
-.projeto-bootstrap .card-text,
-.projeto-bootstrap small {
-    color: #49365f;
-}
+    header h1 {
+        font-size: 26px;
+    }
 
-.projeto-bootstrap .card-title {
-    color: #593b83;
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .capa h1 {
+        font-size: 48px;
+    }
+
+    .capa-descricao {
+        font-size: 16px;
+    }
+
+    .capa-botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botao {
+        text-align: center;
+    }
+
+    .pagina {
+        padding: 60px 7%;
+    }
+
+    .pagina p {
+        font-size: 1.1rem;
+    }
+
+    .projeto-bootstrap .card-body {
+        padding: 25px;
+    }
+
+    .projeto-bootstrap .carousel-item img {
+        height: 350px;
+    }
+}
+.pagina h3{
+    color: #e0d1f0;
 }
